@@ -1,4 +1,4 @@
-FROM ubuntu:noble
+FROM ubuntu:focal
 
 ARG BUILD_DATE
 
