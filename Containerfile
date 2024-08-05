@@ -1,9 +1,10 @@
-FROM ubuntu:noble
+FROM ubuntu:focal
 
 ARG BUILD_DATE
 
+LABEL summary="Ubuntu Systemd Container Image."
 LABEL maintainer="Uco Mesdag <uco@mesd.ag>"
-LABEL build_date=${BUILD_DATE}
+LABEL build-date=${BUILD_DATE}
 
 ENV container=podman
 
