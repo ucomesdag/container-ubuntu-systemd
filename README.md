@@ -12,8 +12,9 @@ This repository one branche that relate to Ubuntu a version.
 
 |Branch |Ubuntu Version             |Container image tag|
 |-------|---------------------------|-------------------|
-|jammy  |Jammy Jellyfish (22.04 LTS)|jammy              |
-|main   |focal fossa (20.04 LTS)    |latest             |
+|main   |noble numbat (24.04 LTS)   |latest             |
+|jammy  |jammy jellyfish (22.04 LTS)|jammy              |
+|focal  |focal fossa  (20.04 LTS)   |focal              |
 |bionic |bionic beaver (18.04 LTS)  |bionic             |
 
 Pull strategy
@@ -29,7 +30,7 @@ podman run \
   --tty \
   --privileged \
   --volume /sys/fs/cgroup:/sys/fs/cgroup:ro \
-  quay.io/ucomesdag/ubuntu:jammy
+  quay.io/ucomesdag/ubuntu:bionic
 ```
 
 <!-- container image -->
