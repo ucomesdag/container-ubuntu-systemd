@@ -1,4 +1,4 @@
-FROM ubuntu:focal
+FROM ubuntu:noble
 
 ARG BUILD_DATE
 
@@ -11,7 +11,7 @@ ENV container=podman
 RUN sed -i 's/# deb/deb/g' /etc/apt/sources.list
 
 # Enable systemd and install required packages.
-RUN apt-get update && apt-get install -y systemd systemd-sysv sudo && apt-get clean && \
+RUN apt-get update && apt-get install -y systemd sudo && apt-get clean && \
     (cd /lib/systemd/system/sysinit.target.wants/ ; for i in * ; do [ $i = systemd-tmpfiles-setup.service ] || rm -f $i ; done) ; \
     rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* ; \
     rm -f /lib/systemd/system/multi-user.target.wants/* ; \
